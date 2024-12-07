@@ -49,3 +49,20 @@ def generate_negative_samples(df, ratio=3):
     neg_df['label'] = 0  # Negative samples
     print(f"Generated {len(negative_samples)} negative samples after {attempts} attempts.")
     return neg_df
+
+if __name__ == "__main__":
+    # Load positive samples
+    df = pd.read_csv("../data/processed_data.csv")
+    df['label'] = 1  # Positive samples
+
+    # Limit the number of positive samples
+    df = df.sample(n=5000, random_state=42).reset_index(drop=True)  # Randomly select 15,000 samples
+
+    # Generate negative samples
+    neg_df = generate_negative_samples(df)
+    print(f"Generated {len(neg_df)} negative samples.")
+
+    # Combine datasets
+    combined_df = pd.concat([df, neg_df]).sample(frac=1, random_state=42).reset_index(drop=True)  # Shuffle
+    combined_df.to_csv("../data/dataset_with_negatives.csv", index=False)
+    print("Dataset with negatives saved.")
