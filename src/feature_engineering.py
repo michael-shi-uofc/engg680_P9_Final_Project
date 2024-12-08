@@ -7,11 +7,11 @@ def encode_features(df):
     Encode features for the classification model.
     """
     print("Encoding features...")
-    
+
     required_columns = ['geohash', 'day', 'hour', 'month']
     if not all(col in df.columns for col in required_columns):
         raise ValueError(f"Dataset is missing required columns: {set(required_columns) - set(df.columns)}")
-    
+
     # Cyclical encoding for temporal features
     df['day_sin'] = np.sin(2 * np.pi * df['day'] / 7)
     df['day_cos'] = np.cos(2 * np.pi * df['day'] / 7)
@@ -35,4 +35,3 @@ if __name__ == "__main__":
     encoded_df = encode_features(df)
     encoded_df.to_csv("../data/encoded_dataset.csv", index=False)
     print("Encoded dataset saved.")
- 
