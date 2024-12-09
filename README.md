@@ -8,7 +8,7 @@
 - Elnaz Gholizadeh,   UCID: 30264047
 - Sahar Sedarat,      UCID: 30234160
 
-(*Final Report contains certificate of work*)
+(*Each member has made at least one commit. The Final Report contains certificate of work*)
 
 ## Overview:
 We have created a Deep Neural Network to predict traffic incidents in Calgary.
