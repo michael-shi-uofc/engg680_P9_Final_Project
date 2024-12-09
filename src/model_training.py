@@ -39,7 +39,7 @@ def train_model(data_path, model_path):
     # Train model
     model.fit(
         X_train, y_train,
-        epochs=30,
+        epochs=50,
         batch_size=32
     )
 
@@ -66,4 +66,4 @@ def train_model(data_path, model_path):
 
 
 if __name__ == "__main__":
-    train_model("../data/encoded_dataset.csv", "../models/traffic_model.h5")
+    train_model("../data/encoded_dataset.csv", "../model/traffic_model.h5")

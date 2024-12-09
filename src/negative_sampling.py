@@ -56,7 +56,7 @@ if __name__ == "__main__":
     df['label'] = 1  # Positive samples
 
     # Limit the number of positive samples
-    df = df.sample(n=5000, random_state=42).reset_index(drop=True)  # Randomly select 15,000 samples
+    df = df.sample(n=10000, random_state=42).reset_index(drop=True)  # Randomly select samples
 
     # Generate negative samples
     neg_df = generate_negative_samples(df)
