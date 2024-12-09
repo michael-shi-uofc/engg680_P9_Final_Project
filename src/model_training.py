@@ -42,3 +42,28 @@ def train_model(data_path, model_path):
         epochs=30,
         batch_size=32
     )
+
+    print(f"Number of features during training: {X_train.shape[1]}")
+
+    # Evaluate model on test set
+    test_loss, test_accuracy = model.evaluate(X_test, y_test)
+    print(f"Test Accuracy: {test_accuracy}, Test Loss: {test_loss}")
+
+    y_pred_proba = model.predict(X_test).ravel()
+
+    # Default threshold F1 score
+    y_pred = (y_pred_proba > 0.5).astype(int)
+    default_f1 = f1_score(y_test, y_pred)
+    print(f"F1-Score: {default_f1:.4f}")
+
+
+    print("Adjusted Confusion Matrix:")
+    print(confusion_matrix(y_test, y_pred))
+
+    # Save model
+    model.save(model_path.replace('.h5', '.keras'))
+    print(f"Model saved to {model_path}")
+
+
+if __name__ == "__main__":
+    train_model("../data/encoded_dataset.csv", "../models/traffic_model.h5")
