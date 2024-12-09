@@ -1,12 +1,12 @@
 # ENGG680 Group 9 Final Project
-Michael Shi,        UCID: 10174675
-Sheinn Min Thu,     UCID: 30200456
-Hsu Hsu Sandi,      UCID: 30262965
-Hlayn Toe Wai,      UCID: 30266673
-Gopika Menon,       UCID: 30046245
-Tara Rezaei,        UCID: 30263674
-Elnaz Gholizadeh,   UCID: 30264047
-Sahar Sedarat,      UCID: 30234160
+- Michael Shi,        UCID: 10174675
+- Sheinn Min Thu,     UCID: 30200456
+- Hsu Hsu Sandi,      UCID: 30262965
+- Hlayn Toe Wai,      UCID: 30266673
+- Gopika Menon,       UCID: 30046245
+- Tara Rezaei,        UCID: 30263674
+- Elnaz Gholizadeh,   UCID: 30264047
+- Sahar Sedarat,      UCID: 30234160
 
 (*Final Report contains certificate of work*)
 
