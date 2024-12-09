@@ -8,16 +8,16 @@ Tara Rezaei,        UCID: 30263674
 Elnaz Gholizadeh,   UCID: 30264047
 Sahar Sedarat,      UCID: 30234160
 
-(Final Report contains certificate of work)
+(*Final Report contains certificate of work*)
 
 ## Overview:
 We have created a Deep Neural Network to predict traffic incidents in Calgary.
 Our predictive model is trained on historical traffic incident data from the City of Calgary to learn patterns between temporal features, spatial features, and incident occurrences. During testing, the model predicts whether a given data point represents an incident or a non-incident. After training, it generates probabilities for incidents across Calgary by applying user-provided time inputs (day, month, hour) to the dataset. These inputs allow the model to predict the likelihood of incidents at various locations. The results are visualized as an interactive heatmap, providing a clear view of incident probabilities across Calgary.
 
 ## Instructions:
-Note: Performance Results and Heatmap Outputs may vary from the final report as the parameters may have been changed/reverted as we continue to experiment with different settings to improve performance. The generated random negative samples may also be different, as well as the random subset selected from the total dataset. This will result in different outputs and performance. 
+**Note:** Performance Results and Heatmap Outputs may vary from the final report as the parameters may have been changed/reverted as we continue to experiment with different settings to improve performance. The generated random negative samples may also be different, as well as the random subset selected from the total dataset. This will result in different outputs and performance. 
 
-Order of file execution:
+**Order of file execution:**
 - data_processing.py
 - negative_sampling.py
 - feature_engineering.py
