@@ -17,6 +17,12 @@ Our predictive model is trained on historical traffic incident data from the Cit
 ## Instructions:
 **Note:** Performance Results and Heatmap Outputs may vary from the final report as the parameters may have been changed/reverted as we continue to experiment with different settings to improve performance. The generated random negative samples may also be different, as well as the random subset selected from the total dataset. This will result in different outputs and performance. 
 
+# Folder Structure:
+- data: contains the dataset csv files
+- model: contains the AI model file
+- output: contains the generated heatmap files
+- src: contains all the python code files
+
 **Order of file execution:**
 - data_processing.py
 - negative_sampling.py

@@ -8,6 +8,7 @@ def encode_features(df):
     """
     print("Encoding features...")
 
+    # Added feature columns
     required_columns = ['geohash', 'day', 'hour', 'month']
     if not all(col in df.columns for col in required_columns):
         raise ValueError(f"Dataset is missing required columns: {set(required_columns) - set(df.columns)}")
